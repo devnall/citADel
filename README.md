@@ -27,6 +27,11 @@ Long term goals include:
 ## TODOs:
 * Automate the ssh key config/copy via a Makefile or some other way
 * Find a way to give different nodes different hostnames (first block of main.yml)
+* Could I use a Makefile to make the initial (pre-Ansible) setup and config more frictionless? Would that be dumb/redundant?
+  1. Take desired/expected IP as input
+  1. Create/update the `hosts` file in the repo
+  1. SCP id_rsa.pub for ansible/pi user to authorized_keys
+  1. Invoke the Ansible playbook/run
 * 
 
 ## Other Notes
