@@ -10,17 +10,28 @@ Long term goals include:
 
 ## Requirements
 * A RaspberryPi
-* A clean install of Raspbian Lite flashed to the (micro)SD card that will go in the RasPi (see ApplePi-Baker and/or balenaEtcher(MacOS))
-* After flashing Raspbian onto the card, `touch /ssh` to enable SSHd on boot, which is needed for a headless install
+* A clean install of Raspbian Lite flashed to the (micro)SD card that will go in the RasPi (see ApplePi-Baker and/or balenaEtcher to flash with MacOS, use `dd`)
+* After flashing Raspbian onto the card, `touch /boot/ssh` to enable SSHd on boot, which is needed for a headless install
 * An SSH keypair to use for passwordless SSH access to the device.
+* Ansible installed on your local system
 
 ## Process
 1. Insert SD carn in RasPi and boot up.
 1. Use nmap or dhcp logs to find its IP address.
+1. Edit the hosts.example file, adding your RasPi IP under the `[pihole]` section
 1. Verify that you can SSH to it with the default `pi:raspberry` credentials.
 1. `mkdir ~/.ssh && touch ~/.ssh/authorized_keys`
 1. `vi ~/.ssh/authorized_keys` and copy/paste your id_rsa.pub contents. Write and exit.
 1. 
+
+## TODOs:
+* Automate the ssh key config/copy via a Makefile or some other way
+* Find a way to give different nodes different hostnames (first block of main.yml)
+* 
+
+## Other Notes
+* Once everything's setup, you'll probably want to find the MAC of your Pi and give it a reserved IP on your router/dhcp server.
+*
 
 ## Links, References, and Inspiration
 
