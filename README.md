@@ -32,6 +32,7 @@ Long term goals include:
   1. Create/update the `hosts` file in the repo
   1. SCP id_rsa.pub for ansible/pi user to authorized_keys
   1. Invoke the Ansible playbook/run
+* Assign sequential hostnames to new nodes; e.g. pihole01, pihole02, etc. See: https://stackoverflow.com/questions/41628806/ansible-loops-for-assigning-sequential-integers-as-hostnames
 * 
 
 ## Other Notes

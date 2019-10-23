@@ -1,0 +1,13 @@
+---
+# Variables listed here are applicable to the "pihole" host group
+
+user_pihole: "pihole"
+group_pihole: "pihole"
+
+git_repo_web_interface: "https://github.com/pi-hole/AdminLTE-git"
+git_repo_core: "https://github.com/pi-hole/pi-hole.git"
+fspath_web_interface: "/var/www/admin"
+fspath_web_directory: "/var/www/pihole"
+fspath_pihole: "/opt/pihole"
+fspath_pihole_src: "/etc/.pihole"
+fspath_pihole_config: "/etc/pihole"

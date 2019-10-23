@@ -1,0 +1,6 @@
+---
+# Variables listed here are applicable to the "dns" host group
+
+dns_servers:
+  - "1.1.1.1"
+  - "9.9.9.9"
