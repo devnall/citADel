@@ -2,11 +2,11 @@
 alias _='sudo'
 
 # Directory listing
-alias l='ls -lAhF --color=auto"
-alias ll='ls -lhF --color=auto"
-alias la='ls -AhF --color=auto"
-alias lsa='ls -lahF --color=auto"
-alias lsal='ls -lahF --color=auto | less -R"
+alias l='ls -lAhF --color=auto'
+alias ll='ls -lhF --color=auto'
+alias la='ls -AhF --color=auto'
+alias lsa='ls -lahF --color=auto'
+alias lsal='ls -lahF --color=auto | less -R'
 
 # Directory navigation
 alias ..='cd ..'
