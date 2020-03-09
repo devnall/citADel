@@ -1,0 +1,6 @@
+
+- name: restart ntp
+  service: name=ntp state=restarted
+
+- name: force ntp update
+  shell: "service ntp stop && ntpd -gq && service ntp start"

@@ -1,22 +1,23 @@
 ---
 # This playbook deploys the whole application stack
 
-- name: Apply common configuration to all nodes
+- name: Apply common configuration to all raspberry pi nodes
   hosts: all
-  remote_user: root
+  remote_user: pi
+  become: yes
 
   roles: 
-    - common
+    - pi
 
-- name: Configure and deploy Pi-Hole on Raspberry Pi
+- name: Configure and deploy PiHole on raspberry pi nodes
   hosts: piholes
   remote_user: pi
   become: yes
 
   roles:
-    - pi
+    - pihole
 
-- name: Configure and deploy Unbound DNS and DNSMasq
+- name: Configure and DNSMasq and local network hostnames
   hosts: dnsservers
   remote_user: pi
   become: yes
