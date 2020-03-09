@@ -10,7 +10,7 @@ Long term goals include:
 
 ## Requirements
 * A RaspberryPi
-* A clean install of Raspbian Lite flashed to the (micro)SD card that will go in the RasPi (see ApplePi-Baker and/or balenaEtcher to flash with MacOS, use `dd`)
+* A clean install of Raspbian Lite flashed to the (micro)SD card that will go in the RasPi (see ApplePi-Baker and/or balenaEtcher to flash with MacOS, or use `dd`)
 * After flashing Raspbian onto the card, `touch /boot/ssh` to enable SSHd on boot, which is needed for a headless install
 * An SSH keypair to use for passwordless SSH access to the device.
 * Ansible installed on your local system
@@ -33,7 +33,9 @@ Long term goals include:
   1. SCP id_rsa.pub for ansible/pi user to authorized_keys
   1. Invoke the Ansible playbook/run
 * Assign sequential hostnames to new nodes; e.g. pihole01, pihole02, etc. See: https://stackoverflow.com/questions/41628806/ansible-loops-for-assigning-sequential-integers-as-hostnames
-* 
+* Replace NTP with Chrony
+* /etc/dnsmasq.d/02-nall.casa.conf
+* Any other dnsmasq config changes
 
 ## Other Notes
 * Once everything's setup, you'll probably want to find the MAC of your Pi and give it a reserved IP on your router/dhcp server.
@@ -46,4 +48,4 @@ Long term goals include:
 * [Raspian Download](https://www.raspberrypi.org/downloads/raspbian/)
 
 * [Complete Guite to Set Up Raspberry Pi Without a Keyboard and Mouse](https://sendgrid.com/blog/complete-guide-set-raspberry-pi-without-keyboard-mouse/)
-*
+* [algo Project on GitHub](https://github.com/trailofbits/algo)
